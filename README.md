@@ -7,6 +7,54 @@
 
 <img align="right" width=175 src="buildroot/share/pixmaps/logo/marlin-250.png" />
 
+# This Fork
+
+This fork contains the configuration for my DIY version of the Lumen PNP machine. It uses the BigTreeTech Octopus V1.1 mainboard.
+
+
+
+## How To Build
+
+**If you just want to install the firmware, get the firmware.bin in this repo's root and upload it.**
+
+Just download VS Code, install the PlatformIO IDE and build using the **default** environment. I have adapted the config file, so that it all works out.
+
+
+
+## Installation
+
+Hit the Build button in VS Code to build it. We will upload using **SD CARD** so that we don't overwrite the bootloader.
+
+After the build is finished, copy the firmware file (.pio\build\BIGTREE_OCTOPUS_V1\firmware.bin) to the SD card, plug it into the maiboard and hit the small reset button next to the USB C port.
+
+To check that the firmware was uploaded correctly, plug the SD card back into your PC and check that the file is now named FIRMWARE.CUR.
+
+
+
+# Wiring
+
+TODO: Add wiring
+
+
+
+# GCODE Differences
+
+Note that the actuators are set differently. The following commands work:
+
+```M106 P5 S255 ; enable valve
+M106 P4 S255 ; enable pump
+M107 P4		 ; disable pump
+M106 P5 S255 ; enable valve
+M107 P5		 ; disable valve
+
+```
+
+
+
+---
+
+
+
 Additional documentation can be found at the [Marlin Home Page](https://marlinfw.org/).
 Please test this firmware and let us know if it misbehaves in any way. Volunteers are standing by!
 
