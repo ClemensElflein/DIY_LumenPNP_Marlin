@@ -15,7 +15,7 @@ This fork contains the configuration for my DIY version of the Lumen PNP machine
 
 ## How To Build
 
-**If you just want to install the firmware, get the firmware.bin in this repo's root and upload it.**
+**If you just want to install the firmware, get the firmware.bin in this repo's prebuilt dir and upload it.**
 
 Just download VS Code, install the PlatformIO IDE and build using the **default** environment. I have adapted the config file, so that it all works out.
 
